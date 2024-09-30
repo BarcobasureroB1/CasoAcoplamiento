@@ -18,7 +18,7 @@ public class Main {
         userManager.modifyOrderGlobalState("Urgent Order");
 
         // Mostrar el estado global modificado
-        System.out.println("Global order state is now: " + OrderManager.globalOrderState);
+        System.out.println("Global order state is now: " + OrderManager.getGlobalOrderState());
 
         // Usar métodos inestables de OrderManager
         userManager.useUnstableMethods();

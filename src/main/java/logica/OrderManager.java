@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class OrderManager {
     // Variable global compartida para el estado de los pedidos
-    public static String globalOrderState = "No Orders";
+    private static String globalOrderState = "No Orders";
 
     private Connection connection;
 
@@ -61,6 +61,14 @@ public class OrderManager {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setGlobalOrderState(String newState){
+        globalOrderState = newState;
+    }
+
+    public static String getGlobalOrderState(){
+        return globalOrderState;
     }
 
     public void placeNewOrder() {
